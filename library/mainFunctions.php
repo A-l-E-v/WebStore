@@ -1,10 +1,10 @@
 <?php
 
 /**
- * loadPage
+ * loadPage - формирование запрашиваемой страницы
  *
- * @param  mixed $controllerName
- * @param  mixed $actionName
+ * @param  mixed $controllerName - название контроллера
+ * @param  mixed $actionName - название функции обработки страницы внутри контроллера
  * @return void
  */
 function loadPage($controllerName, $actionName)
