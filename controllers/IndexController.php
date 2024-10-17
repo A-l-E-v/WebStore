@@ -1,9 +1,11 @@
 <?php
+
 /**
  * Контроллер главной страницы
  */
 
 
-function testAction()  {
-    echo 'This is test';
+function indexAction($smarty)  {
+    $smarty->assign('pageTitle', 'Главная');
+    loadTemplate($smarty, 'index');
 }
