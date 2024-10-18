@@ -53,14 +53,32 @@ function getAllCategories()
 
     // print_r("Запрос к БД успешный!<br>");
 
-    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    // $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     // вывод информации
-    foreach ($rows as $row) {
+    while ($row = mysqli_fetch_array($result)) {
         // echo ('<br>Уровень: ' . $row['id']) . ";<br>Родитель: " . $row['parent_id'] .
         //     '<br> Имя категории: ' . $row['name_ru'] . '<br> Category name: ' . $row['name_en'];
-    $smartyArray[] = $row;
-    
+        $recChildren = getChildren($row['id']);
+        // var_dump($recChildren);
+        if ($recChildren) {
+            $row['children'] = $recChildren;
+        }
+
+        $smartyArray[] = $row;
     }
     return $smartyArray;
+}
+
+function getChildren($recID)
+{
+    $sql = 'SELECT * FROM Categories WHERE parent_id =' . $recID;
+    $connection = createConnectionDB();
+
+    $result = mysqli_query($connection, $sql);
+
+    // foreach ($rows as $row) {
+    //     echo($row['name_ru']);    }
+
+    return createSmartyRecArr($result);
 }

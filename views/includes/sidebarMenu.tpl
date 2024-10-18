@@ -6,18 +6,26 @@
     <span class="fs-5 fw-semibold">Категории</span>
   </a>
   <ul class="list-unstyled ps-0">
-    {foreach $arrCategories as $item}
+    {foreach $allCategories as $item}
     <li class="mb-1">
-      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+      <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" 
+      data-bs-toggle="collapse" data-bs-target="#{$item['name_en']}-collapse" aria-expanded="false">
         {$item['name_ru']}
       </button>
-      <div class="collapse" id="home-collapse" style="">
+
+      {if isset($item['children'])}
+      <div class="collapse" id="{$item['name_en']}-collapse" style="">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+
+          {foreach $item['children'] as $itemChild}
+          <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">
+            {$itemChild['name_ru']}</a></li>
+
+          {/foreach}
+
         </ul>
       </div>
+      {/if}
     </li>
     {/foreach}
   </ul>

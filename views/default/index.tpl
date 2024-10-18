@@ -23,9 +23,7 @@
     {include file = "../includes/sidebarMenu.tpl"}
     {include file = "../includes/footer.tpl"}
 
-    <div id='content'>
-       
-    </div>
+    <div id='content'></div>
 
 
 </body>
