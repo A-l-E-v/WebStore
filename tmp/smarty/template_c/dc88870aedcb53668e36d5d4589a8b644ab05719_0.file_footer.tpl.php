@@ -1,0 +1,43 @@
+<?php
+/* Smarty version 5.4.1, created on 2024-10-17 05:10:27
+  from 'file:/var/www/html/WebStore/views/default/../includes/footer.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.4.1',
+  'unifunc' => 'content_67109c43355930_67565158',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'dc88870aedcb53668e36d5d4589a8b644ab05719' => 
+    array (
+      0 => '/var/www/html/WebStore/views/default/../includes/footer.tpl',
+      1 => 1729141821,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_67109c43355930_67565158 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = '/var/www/html/WebStore/views/includes';
+?><footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      <i class="bi-alarm"></i>
+
+    </ul>
+
+    
+  </footer><?php }
+}
