@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-18 02:38:12
+/* Smarty version 5.4.1, created on 2024-10-20 06:21:50
   from 'file:index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_6711ca14e87715_46843097',
+  'unifunc' => 'content_6714a17e7fa9d0_39109042',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '91df01203ffa18c4442577c3064e29e072150182' => 
     array (
       0 => 'index.tpl',
-      1 => 1729218370,
+      1 => 1729405305,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/footer.tpl' => 1,
   ),
 ))) {
-function content_6711ca14e87715_46843097 (\Smarty\Template $_smarty_tpl) {
+function content_6714a17e7fa9d0_39109042 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -50,13 +50,24 @@ css/main.css">
 
     <?php $_smarty_tpl->renderSubTemplate("file:../includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
+
+    <div class="wrapper">
     <?php $_smarty_tpl->renderSubTemplate("file:../includes/sidebarMenu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
+
+        <div id='content'>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php $_smarty_tpl->renderSubTemplate("file:../includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
-
-    <div id='content'></div>
-
 
 </body>
 

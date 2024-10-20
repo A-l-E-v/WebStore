@@ -13,6 +13,8 @@ const DB_NAME = 'WebStoreProjectDB';
 const DB_USER = 'admin';
 const DB_PASSWORD = 'aaa000';
 
+// Выгрузка товаров по 12 штук
+const LASTPRODUCTS = 12;
 
 // Папка шаблона
 $templateFolder = "default";
