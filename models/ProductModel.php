@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Получение списка товаров для главной страницы
+ *
+ * @param  mixed $limit - ограничение по кол-ву товаров
+ * @return void
+ */
 function getLastProducts($limit = null){
 
     $sql = 'SELECT * FROM Products ORDER BY id DESC';
@@ -18,6 +24,12 @@ function getLastProducts($limit = null){
     return createSmartyRecArr($result);
 }
 
+/**
+ * Получение списка товаров для страницы подкатегории
+ *
+ * @param  mixed $id - идентификатор категории
+ * @return void
+ */
 function getProductsByCategory ($id){
 
     $itemId = intval ($id);

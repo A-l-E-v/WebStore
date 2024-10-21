@@ -70,6 +70,12 @@ function getAllCategories()
     return $smartyArray;
 }
 
+/**
+ * Получение подкатегории товаров из БД
+ *
+ * @param  mixed $recID - идентификатор категории
+ * @return void
+ */
 function getChildren($recID)
 {
     $sql = 'SELECT * FROM Categories WHERE parent_id =' . $recID;
@@ -83,6 +89,12 @@ function getChildren($recID)
     return createSmartyRecArr($result);
 }
 
+/**
+ * Получение информации о подкатегории товаров из БД
+ *
+ * @param  mixed $id - идентификатор категории
+ * @return void
+ */
 function getCategoriesById($id) {
     $categoryId = intval ($id);
     $sql = 'SELECT * FROM Categories WHERE id = ' . $categoryId;

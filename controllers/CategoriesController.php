@@ -1,8 +1,16 @@
 <?php
 
+// Контроллер страниц категорий
+
 include_once 'models/CategoriesModel.php';
 include_once 'models/ProductModel.php';
 
+/**
+ * Метод формирования страниц подкатегорий
+ *
+ * @param  mixed $smarty
+ * 
+ */
 function indexAction ($smarty) {
     $childCategoryId = isset($_GET['id']) ? $_GET['id'] : null;
     if ($childCategoryId == null) exit ();
@@ -18,6 +26,8 @@ function indexAction ($smarty) {
 
     $smarty->assign('pageTitle', $recCategory['name_ru']);
     $smarty->assign('allCategories', $allCategories);
+
+    // Текущая категория
     $smarty->assign('recCategory', $recCategory);
     $smarty->assign('recProducts', $recProducts);
 
