@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-20 17:49:35
-  from 'file:index.tpl' */
+/* Smarty version 5.4.1, created on 2024-10-20 17:53:11
+  from 'file:category.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_671542af496659_54207948',
+  'unifunc' => 'content_6715438730d4f8_37028946',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '91df01203ffa18c4442577c3064e29e072150182' => 
+    'd4e9f0fe5524e56ca066fe97b914b530a75a0c6a' => 
     array (
-      0 => 'index.tpl',
-      1 => 1729445376,
+      0 => 'category.tpl',
+      1 => 1729445937,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/footer.tpl' => 1,
   ),
 ))) {
-function content_671542af496659_54207948 (\Smarty\Template $_smarty_tpl) {
+function content_6715438730d4f8_37028946 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -56,9 +56,10 @@ css/main.css">
 ?>
 
         <div id='content'>
-            <h5>Последние поступления</h5>
+            <h5>Товары категории <?php echo $_smarty_tpl->getValue('recCategory')['name_ru'];?>
+</h5>
             <?php
-$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('lastProducts'), 'prod');
+$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('recProducts'), 'prod');
 $foreach0DoElse = true;
 foreach ($_from ?? [] as $_smarty_tpl->getVariable('prod')->value) {
 $foreach0DoElse = false;

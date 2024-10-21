@@ -82,3 +82,16 @@ function getChildren($recID)
 
     return createSmartyRecArr($result);
 }
+
+function getCategoriesById($id) {
+    $categoryId = intval ($id);
+    $sql = 'SELECT * FROM Categories WHERE id = ' . $categoryId;
+    $link = createConnectionDB();
+    $result = mysqli_query($link, $sql);
+
+    // if ($result === false) {
+    //     echo "Ошибка: " . mysqli_error($link);
+    // }
+
+    return mysqli_fetch_assoc($result);
+}

@@ -17,3 +17,18 @@ function getLastProducts($limit = null){
     
     return createSmartyRecArr($result);
 }
+
+function getProductsByCategory ($id){
+
+    $itemId = intval ($id);
+    $sql = 'SELECT * FROM Products WHERE category_id = ' . $itemId;
+    $link = createConnectionDB();
+    $result = mysqli_query($link, $sql);
+
+    // if ($result === false) {
+    //     echo "Ошибка: " . mysqli_error($link);
+    // }
+
+    return createSmartyRecArr($result);
+
+}

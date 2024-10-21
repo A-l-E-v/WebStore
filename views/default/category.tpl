@@ -25,8 +25,8 @@
     {include file = "../includes/sidebarMenu.tpl"}
 
         <div id='content'>
-            <h5>Последние поступления</h5>
-            {foreach $lastProducts as $prod}
+            <h5>Товары категории {$recCategory['name_ru']}</h5>
+            {foreach $recProducts as $prod}
             <div class="card" style="width: 13rem;">
                 <img class="card-img-top" src="www/img/products/{$prod['image']}" alt="{$prod['name_ru']}">
                 <div class="card-body">

@@ -12,6 +12,8 @@ function indexAction($smarty)  {
     $lastProducts = getLastProducts(LASTPRODUCTS);
 
     $smarty->assign('allCategories', $allCategories);
+    $smarty->assign('recCategory', null);
+
     $smarty->assign('lastProducts', $lastProducts);    
 
     $smarty->assign('pageTitle', 'Главная');
