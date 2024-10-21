@@ -20,7 +20,7 @@ function indexAction($smarty)  {
     $smarty->assign('allCategories', $allCategories);
     $smarty->assign('recCategory', null);
 
-    $smarty->assign('lastProducts', $lastProducts);    
+    $smarty->assign('recProducts', $lastProducts);    
 
     $smarty->assign('pageTitle', 'Главная');
     loadTemplate($smarty, 'index');

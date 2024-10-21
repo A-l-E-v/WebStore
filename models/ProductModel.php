@@ -44,3 +44,24 @@ function getProductsByCategory ($id){
     return createSmartyRecArr($result);
 
 }
+
+/**
+ * Получение информации о конкретном товаре
+ *
+ * @param  mixed $id товара
+ * @return void
+ */
+function getProductById($id)  {
+    
+    $itemId = intval ($id);
+    $sql = 'SELECT * FROM Products WHERE id = ' . $itemId;
+    $link = createConnectionDB();
+    $result = mysqli_query($link, $sql);
+
+    // if ($result === false) {
+    //     echo "Ошибка: " . mysqli_error($link);
+    // }
+
+    return mysqli_fetch_assoc($result);
+
+}
