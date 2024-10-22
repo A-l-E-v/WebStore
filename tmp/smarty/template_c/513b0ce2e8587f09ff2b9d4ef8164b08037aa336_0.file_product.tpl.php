@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-21 15:13:25
+/* Smarty version 5.4.1, created on 2024-10-22 02:39:53
   from 'file:product.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_67166f95b62350_46423909',
+  'unifunc' => 'content_67171079dcae63_00455050',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '513b0ce2e8587f09ff2b9d4ef8164b08037aa336' => 
     array (
       0 => 'product.tpl',
-      1 => 1729523600,
+      1 => 1729564717,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/footer.tpl' => 1,
   ),
 ))) {
-function content_67166f95b62350_46423909 (\Smarty\Template $_smarty_tpl) {
+function content_67171079dcae63_00455050 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -65,8 +65,6 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/default';
                 <medium class="text-body-secondary">Цена: <?php echo $_smarty_tpl->getValue('recProduct')['price'];?>
  руб.</medium>
               </p>
-              <p><?php echo $_smarty_tpl->getValue('itemInCart');?>
-</p>
               <a id="addCart_<?php echo $_smarty_tpl->getValue('recProduct')['id'];?>
 " <?php if ($_smarty_tpl->getValue('itemInCart')) {?>style = "display: none"<?php }?> onClick="addToCart(<?php echo $_smarty_tpl->getValue('recProduct')['id'];?>
 ); return false;" class="btn btn-primary order" href="#">В корзину</a>
