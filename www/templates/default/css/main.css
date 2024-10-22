@@ -35,4 +35,5 @@ body{
 
 .order {
     float: right;
+    margin: 10px;
 }
