@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-21 11:24:03
+/* Smarty version 5.4.1, created on 2024-10-22 03:38:18
   from 'file:/var/www/html/WebStore/views/default/../includes/header.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_671639d3cd3408_79274233',
+  'unifunc' => 'content_67171e2ae143d9_96172948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa466c9b8dec07ab7bab90c7a29d01b920a94c3e' => 
     array (
       0 => '/var/www/html/WebStore/views/default/../includes/header.tpl',
-      1 => 1729509753,
+      1 => 1729568280,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_671639d3cd3408_79274233 (\Smarty\Template $_smarty_tpl) {
+function content_67171e2ae143d9_96172948 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/includes';
 ?><header class="p-3 text-bg-dark">
   <div class="container">
@@ -58,8 +58,8 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/includes';
           </span>
         </a>
 
-        <button type="button" class="btn btn-outline-light me-2">Войти</button>
-        <button type="button" class="btn btn-warning">Регистрация</button>
+        <a type="button" class="btn btn-outline-light me-2">Войти</a>
+        <a href="/?controller=user" type="button" class="btn btn-warning">Регистрация</a>
       </div>
     </div>
   </div>

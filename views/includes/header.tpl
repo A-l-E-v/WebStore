@@ -33,8 +33,8 @@
           </span>
         </a>
 
-        <button type="button" class="btn btn-outline-light me-2">Войти</button>
-        <button type="button" class="btn btn-warning">Регистрация</button>
+        <a type="button" class="btn btn-outline-light me-2">Войти</a>
+        <a href="/?controller=user" type="button" class="btn btn-warning">Регистрация</a>
       </div>
     </div>
   </div>
