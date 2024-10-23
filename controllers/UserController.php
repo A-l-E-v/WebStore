@@ -3,9 +3,10 @@
 // Контроллер функций пользователя
 
 include_once 'models/CategoriesModel.php';
-include_once 'models/ProductModel.php';
+include_once 'models/UsersModel.php';
 
-function indexAction($smarty){
+function indexAction($smarty)
+{
 
     loadTemplate($smarty, 'registration');
 }
@@ -16,7 +17,10 @@ function indexAction($smarty){
  *
  * @return json-массив данных нового пользователя
  */
-function registerAction(){
+function registerAction()
+{
+
+    // echo("<br><br>132registerAction beginning<br><br>");
 
     $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null;
     $email = trim($email);
@@ -31,11 +35,46 @@ function registerAction(){
     $name = trim($name);
 
     $resData = null;
+    
     $resData = checkRegisterParams($email, $pwd1, $pwd2);
 
     if (!$resData && checkUserEmail($email)) {
+        // echo("<br><br>Пользователь с email '{$email}' уже зарегистрирован.<br><br>");
+
         $result['success'] = 0;
         $result['message'] = "Пользователь с email '{$email}' уже зарегистрирован.";
     }
 
+    if (!$resData) {
+
+        // echo("<br><br>!$resData<br><br>");
+
+        $pwHash = password_hash($pwd1, PASSWORD_BCRYPT);
+
+        $userData = registerNewUser($email, $pwHash, $name, $phone, $address);
+
+        if ($userData['success']) {
+            // echo("<br><br>userDatauccess<br><br>");
+
+            $resData['message'] = 'Пользователь успешно зарегистрирован';
+            $resData['success'] = 1;
+
+            $userData = $userData[0];
+            $resData['userName'] = $userData['name'] ?: $userData['email'];
+            $resData['userEmail'] = $email;
+
+            $_SESSION['user'] = $userData;
+            $_SESSION['user']['displayName'] = $userData['name'] ?: $userData['email'];
+        } else {
+            // echo("<br><br>ELSEuserDatasuccess<br><br>");
+
+            $resData['success'] = 0;
+            $resData['message'] = "Ошибка регистрации";
+        }
+    }
+    // echo("<br><br>132registerAction ending <br><br>");
+
+    // echo ('<br>!!!!!!!!!!<br>$resData in registerAction<br>!!!!!!<br>');
+    // var_dump($resData);
+    echo json_encode($resData);
 }

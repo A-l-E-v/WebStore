@@ -17,7 +17,7 @@ function addToCart(itemId) {
 }
 
 function removeFromCart(itemId) {
-    console.log ("js-removeFromCart(" + itemId + ")");
+    // console.log ("js-removeFromCart(" + itemId + ")");
 
     $.ajax({
         type: 'POST',

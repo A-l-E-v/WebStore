@@ -19,12 +19,20 @@ function registerNewUser($email, $pwdHash, $name, $phone, $address)
     $phone = htmlspecialchars($phone);
     $address = htmlspecialchars($address);
 
-    $sql = "INSERT INTO Users ('email', 'pwd', 'name', 'phone', 'address') VALUES ('{$email}', '{$pwdHash}', '{$name}', '{$phone}', '{$address}') )";
+    $sql = "INSERT INTO Users (`email`, `pwd`, `name`, `phone`, `address`) VALUES ('{$email}', '{$pwdHash}', '{$name}', '{$phone}', '{$address}')";
     $link = createConnectionDB();
+
+    try {
     $result = mysqli_query($link, $sql);
 
+    } catch(Exception $e)
+    {
+
+        $result['success'] = 0;
+    }
+
     if ($result) {
-        $sql = "SELECT * FROM Users WHERE ('email'='{$email}' and 'pwd'='{$pwdHash}' ) LIMIT 1";
+        $sql = "SELECT * FROM Users WHERE (`email`='{$email}' and `pwd`='{$pwdHash}' ) LIMIT 1";
         $result = mysqli_query($link, $sql);
         $result = createSmartyRecArr($result);
 
@@ -33,19 +41,15 @@ function registerNewUser($email, $pwdHash, $name, $phone, $address)
         } else {
             $result['success'] = 0;
         }
-    } else {
-        $result['success'] = 0;
-    }
+    } 
+
+
     return $result;
 }
 
 /**
  * checkRegisterParams
  *
- * @param  mixed $email
- * @param  mixed $pwd1
- * @param  mixed $pwd2
- * @return void
  */
 function checkRegisterParams($email, $pwd1, $pwd2)
 {
@@ -87,6 +91,7 @@ function checkUserEmail($email)
     $sql = "SELECT id FROM Users WHERE email='" . $email . "'";
     $link = createConnectionDB();
     $result = mysqli_query($link, $sql);
-    
+  
+
     return createSmartyRecArr($result);
 }
