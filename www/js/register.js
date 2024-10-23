@@ -17,7 +17,7 @@ function getData(obj_form){
 // регистрация нового пользователя
 
 function registerNewUser(){
-    let postData = getData ('.reg');
+    let postData = getData ('#reg');
 
     $.ajax({
         type: 'POST',
@@ -26,6 +26,9 @@ function registerNewUser(){
         dataType: 'json',
         success: function(data) {
             alert(data['message']);
+            if (data['success']){
+                window.location.href = '/';
+            }
         }
     });
 }

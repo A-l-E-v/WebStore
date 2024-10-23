@@ -32,3 +32,8 @@ function createSmartyRecArr($record)
 // var_dump($smartyRec);
     return $smartyRec;
 }
+
+function http_redirect($url = '/'){
+    header("Location: {$url}");
+    exit;
+}

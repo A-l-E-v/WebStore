@@ -18,7 +18,7 @@
         {include file = "../includes/sidebarMenu.tpl"}
 
         <!-- класс для ajax-формы -->
-        <div class='reg'>
+        <div class='form' id='reg'>
 
             <section>
                 <div class="container">
