@@ -95,3 +95,31 @@ function checkUserEmail($email)
 
     return createSmartyRecArr($result);
 }
+
+
+
+function loginUser($email, $pwd)
+{
+    $email = htmlspecialchars($email);
+    $sql = "SELECT * FROM Users WHERE `email` = '{$email}' LIMIT 1";
+    $link = createConnectionDB();
+
+    try {
+    $result = mysqli_query($link, $sql);
+
+    } catch(Exception $e)
+    {
+
+        $result['success'] = 0;
+    }
+    $result = createSmartyRecArr($result);
+
+    if ((isset($result[0]))&& (password_verify($pwd, $result[0]['pwd']))) {
+       $result['success'] = 1;
+    } else {
+        $result['success'] = 0;
+    }
+
+
+    return $result;
+}
