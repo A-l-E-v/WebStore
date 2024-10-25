@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-23 17:26:09
+/* Smarty version 5.4.1, created on 2024-10-25 05:19:25
   from 'file:/var/www/html/WebStore/views/default/../includes/header.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_671931b18a2958_08733109',
+  'unifunc' => 'content_671b2a5dea7c11_61812957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa466c9b8dec07ab7bab90c7a29d01b920a94c3e' => 
     array (
       0 => '/var/www/html/WebStore/views/default/../includes/header.tpl',
-      1 => 1729704364,
+      1 => 1729833562,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_671931b18a2958_08733109 (\Smarty\Template $_smarty_tpl) {
+function content_671b2a5dea7c11_61812957 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/includes';
 ?><header class="p-3 text-bg-dark">
   <div class="container">
@@ -62,7 +62,9 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/includes';
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"></path>
           </svg>
+         
           <?php echo $_smarty_tpl->getValue('arrUser')['displayName'];?>
+
 
         </a>
         <a href="/?controller=user&action=logout" type="button" class="btn btn-outline-danger btn-sm">

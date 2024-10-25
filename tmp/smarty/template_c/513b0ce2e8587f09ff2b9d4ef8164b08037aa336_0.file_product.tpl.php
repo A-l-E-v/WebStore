@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-22 02:39:53
+/* Smarty version 5.4.1, created on 2024-10-24 05:54:03
   from 'file:product.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_67171079dcae63_00455050',
+  'unifunc' => 'content_6719e0fbcaa1a4_99004090',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '513b0ce2e8587f09ff2b9d4ef8164b08037aa336' => 
     array (
       0 => 'product.tpl',
-      1 => 1729564717,
+      1 => 1729746461,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/footer.tpl' => 1,
   ),
 ))) {
-function content_67171079dcae63_00455050 (\Smarty\Template $_smarty_tpl) {
+function content_6719e0fbcaa1a4_99004090 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -84,9 +84,9 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 
 </body>
 
-<?php echo '<script'; ?>
+<!-- <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
+> -->
 
 </html><?php }
 }

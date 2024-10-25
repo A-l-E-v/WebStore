@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-23 16:25:53
+/* Smarty version 5.4.1, created on 2024-10-24 05:10:23
   from 'file:authorization.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_67192391e53c00_20932880',
+  'unifunc' => 'content_6719d6bf8ba697_91359116',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a0bb3fc16dae63d6b96ad0a3aaa6b8a2f2f47ad' => 
     array (
       0 => 'authorization.tpl',
-      1 => 1729700748,
+      1 => 1729746590,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/sidebarMenu.tpl' => 1,
   ),
 ))) {
-function content_67192391e53c00_20932880 (\Smarty\Template $_smarty_tpl) {
+function content_6719d6bf8ba697_91359116 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -92,9 +92,9 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/default';
         </div>
     </div>
 
-<?php echo '<script'; ?>
+<!-- <?php echo '<script'; ?>
  src = 'www/js/jquery-3.7.1.js' type='text/javascript'><?php echo '</script'; ?>
->
+> -->
 <?php echo '<script'; ?>
  src = 'www/js/auth.js' type='text/javascript'><?php echo '</script'; ?>
 >

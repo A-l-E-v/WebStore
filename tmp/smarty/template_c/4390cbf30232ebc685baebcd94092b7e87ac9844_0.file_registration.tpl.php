@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-23 06:52:00
+/* Smarty version 5.4.1, created on 2024-10-24 05:10:44
   from 'file:registration.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_67189d104e5021_02777426',
+  'unifunc' => 'content_6719d6d461f547_29260702',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4390cbf30232ebc685baebcd94092b7e87ac9844' => 
     array (
       0 => 'registration.tpl',
-      1 => 1729666295,
+      1 => 1729746607,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/sidebarMenu.tpl' => 1,
   ),
 ))) {
-function content_67189d104e5021_02777426 (\Smarty\Template $_smarty_tpl) {
+function content_6719d6d461f547_29260702 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -107,9 +107,9 @@ $_smarty_current_dir = '/var/www/html/WebStore/views/default';
         </div>
     </div>
 
-<?php echo '<script'; ?>
+<!-- <?php echo '<script'; ?>
  src = 'www/js/jquery-3.7.1.js' type='text/javascript'><?php echo '</script'; ?>
->
+> -->
 <?php echo '<script'; ?>
  src = 'www/js/register.js' type='text/javascript'><?php echo '</script'; ?>
 >

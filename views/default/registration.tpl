@@ -77,7 +77,7 @@
         </div>
     </div>
 
-<script src = 'www/js/jquery-3.7.1.js' type='text/javascript'></script>
+<!-- <script src = 'www/js/jquery-3.7.1.js' type='text/javascript'></script> -->
 <script src = 'www/js/register.js' type='text/javascript'></script>
 
 </body>

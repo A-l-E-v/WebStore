@@ -62,7 +62,7 @@
         </div>
     </div>
 
-<script src = 'www/js/jquery-3.7.1.js' type='text/javascript'></script>
+<!-- <script src = 'www/js/jquery-3.7.1.js' type='text/javascript'></script> -->
 <script src = 'www/js/auth.js' type='text/javascript'></script>
 
 </body>
