@@ -32,7 +32,7 @@
                                     <div class="col-md-2">
                                         <img src="www/img/products/{$item['image']}" class="img-fluid rounded-3" alt="{$item['name_ru']}">
                                     </div>
-                                    <a href="/?controller=product&id={$item['id']}/" class="col-md-4 col-lg-4 col-xl-4 nav-link active" style="...">{$item['name_ru']}</a>
+                                    <a href="/?controller=product&id={$item['id']}/" class="col-md-4 col-lg-4 col-xl-4 nav-link active" >{$item['name_ru']}</a>
                                     <div class="col-md-2 d-flex">
                                         <input name="itemCnt_{$item['id']}" id="itemCnt_{$item['id']}" type="text" value="1" onchange="conversPrice({$item['id']}, {$item['price']})" class="form-control" aria-describedby="basic-addon1">
                                     </div>

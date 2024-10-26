@@ -4,6 +4,8 @@
 
 include_once 'models/CategoriesModel.php';
 include_once 'models/ProductModel.php';
+include_once 'models/OrdersModel.php';
+include_once 'models/PurchaseModel.php';
 
 /**
  * Метод формирования страницы корзины
@@ -125,4 +127,48 @@ if(!isset($_SESSION['user'])) {
     loadTemplate($smarty, 'order');
 
 
+}
+
+function saveorderAction(){
+    $cart = isset($_SESSION['orderFromCart']) ? $_SESSION['orderFromCart'] : null;
+
+    if (!$cart) {
+        $resData['success'] = 0;
+        $resData['message'] = 'Нет товаров в заказе';
+        echo json_encode($resData);
+        return;
+        }
+
+        // проверка существования
+        $name = $_REQUEST['name'];
+        $phone = $_REQUEST['phone'];
+        $address = $_REQUEST['address'];
+
+        // создаём новый заказ и получаем его ID
+        $orderId = makeNewOrder($name, $phone, $address);
+
+        // проверка корректности записи заказа
+        if (!$orderId){
+            $resData['success'] = 0;
+            $resData['message'] = 'Ошибка создания заказа';
+            echo json_encode($resData);
+        }
+
+        // сохраняем товары созданного заказа
+
+        $res = setPurchaseForOrder($orderId, $cart);
+
+        // формируем результат сохранения в ответ клиенту
+
+        if ($res) {
+            $resData['success'] = 1;
+            $resData['message'] = 'Заказ создан';
+            unset($_SESSION['orderFromCart']);
+            unset($_SESSION['cart']);
+        } else {
+            $resData['success'] = 0;
+            $resData['message'] = 'Ошибка сохранения данных заказа № ' . $orderId;
+        }
+        
+        echo json_encode($resData);
 }
