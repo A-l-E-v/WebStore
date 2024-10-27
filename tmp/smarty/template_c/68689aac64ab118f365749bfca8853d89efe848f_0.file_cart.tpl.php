@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.1, created on 2024-10-26 05:43:19
+/* Smarty version 5.4.1, created on 2024-10-26 14:47:27
   from 'file:cart.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.1',
-  'unifunc' => 'content_671c817742bdf2_66304972',
+  'unifunc' => 'content_671d00ff6c7e17_69028193',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '68689aac64ab118f365749bfca8853d89efe848f' => 
     array (
       0 => 'cart.tpl',
-      1 => 1729921396,
+      1 => 1729954024,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:../includes/footer.tpl' => 1,
   ),
 ))) {
-function content_671c817742bdf2_66304972 (\Smarty\Template $_smarty_tpl) {
+function content_671d00ff6c7e17_69028193 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = '/var/www/html/WebStore/views/default';
 ?><!DOCTYPE html>
 <html lang="en">
@@ -72,7 +72,7 @@ $foreach0DoElse = false;
 ">
                                     </div>
                                     <a href="/?controller=product&id=<?php echo $_smarty_tpl->getValue('item')['id'];?>
-/" class="col-md-4 col-lg-4 col-xl-4 nav-link active" style="..."><?php echo $_smarty_tpl->getValue('item')['name_ru'];?>
+/" class="col-md-4 col-lg-4 col-xl-4 nav-link active" ><?php echo $_smarty_tpl->getValue('item')['name_ru'];?>
 </a>
                                     <div class="col-md-2 d-flex">
                                         <input name="itemCnt_<?php echo $_smarty_tpl->getValue('item')['id'];?>
@@ -104,7 +104,7 @@ $foreach0DoElse = false;
 $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
                         <ul class="nav nav-pills order">
                             <li class="nav-items">
-                                <a class="nav-link active" href="#">Оформить заказ</a>
+                                <a class="nav-link active" href="/?controller=cart&action=order">Оформить заказ</a>
                             </li>
                         </ul>
                     </div>
@@ -123,6 +123,12 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
 <!-- <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 > -->
+<?php echo '<script'; ?>
+ src='www/js/cart.js' type='text/javascript'><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src='www/js/main.js' type='text/javascript'><?php echo '</script'; ?>
+>
 
 </html><?php }
 }

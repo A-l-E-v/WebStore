@@ -53,7 +53,7 @@
                         {/foreach}
                         <ul class="nav nav-pills order">
                             <li class="nav-items">
-                                <a class="nav-link active" href="#">Оформить заказ</a>
+                                <a class="nav-link active" href="/?controller=cart&action=order">Оформить заказ</a>
                             </li>
                         </ul>
                     </div>
@@ -69,5 +69,7 @@
 </body>
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src='www/js/cart.js' type='text/javascript'></script>
+<script src='www/js/main.js' type='text/javascript'></script>
 
 </html>

@@ -75,12 +75,15 @@ if(!isset($_SESSION['user'])) {
 
     $itemIds = isset($_SESSION['cart']) ? $_SESSION['cart'] : null; // получаем массив id
 
+    // var_dump($itemIds);
+
     if (!$itemIds){
         http_redirect('/?controller=cart&'); // если нет товаров
         return;
     }
     $itemsCnt = array ();
     foreach ($itemIds as $item) {
+        // echo ($item);
         // формируем ключ для массива POST
         $postVar = 'itemCnt_' . $item; 
         // $itemsCnt[3] = 2; товар с ID = 3 лежит в кол-ве 2 шт;
@@ -93,16 +96,19 @@ if(!isset($_SESSION['user'])) {
     $recProducts = getProductsFromArray($itemIds);
     // отладка
     // echo $recProducts[0]['name_ru'];
+    // echo $recProducts[1]['name_ru'];
+
 
     $i = 0;
-
+// var_dump($recProducts);
     foreach ($recProducts as &$item) {
+        // echo ("<br>$item[cnt]=".$item['cnt']);
         // отладка
-        // echo "itemsCnt[item[id]] = " . $itemsCnt[$item['id']] . "<br>";
+        echo "itemsCnt[item['id']] = " . $itemsCnt[$item['id']] . "<br>";
         $item['cnt'] = isset($itemsCnt[$item['id']]) ? $itemsCnt[$item['id']] : 0;
         if ($item['cnt']) {
             $item['realPrice'] = $item['cnt'] * $item['price'];
-            // echo "item[realPrice] =" . $item['cnt'] . '*' . $item['price'] . '=' . $item['realPrice'];
+            echo "item[realPrice] =" . $item['cnt'] . '*' . $item['price'] . '=' . $item['realPrice'];
         } else {
             // если вдруг в корзине есть товар с кол-вом 0 - удаляем его из заказа
 

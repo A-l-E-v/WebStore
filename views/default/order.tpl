@@ -27,38 +27,38 @@
                                         <img src="img/products/{$item['image']}" class="img-fluid rounded-3" alt="{$item['name_ru']}">
                                     </div>
 
-                                    <label name="{$item['name_ru']}" class="col-md-4 col-lg-4 col-xl-4 nav-link active" >{$item['name_ru']}</a>
-                                   
-                                    <div class="col-md-2 d-flex">
-                                        <label name="itemCnt_{$item['id']}" id="itemCnt_{$item['id']}">Количество: {$item['cnt']}</label>
-                                    </div>
+                                    <label name="{$item['name_ru']}" class="col-md-4 col-lg-4 col-xl-4 nav-link active">{$item['name_ru']}</a>
 
-                                    <div class="col-md-2 offset-lg-1">
-                                        <h9 id="itemRealPrice_{$item['id']}" class="mb-0">{$item['price']} руб.</h9>
-                                    </div>
-                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        
-                                    </div>
+                                        <div class="col-md-2 d-flex">
+                                            <label name="itemCnt_{$item['id']}" id="itemCnt_{$item['id']}">Количество: {$item['cnt']}</label>
+                                        </div>
+
+                                        <div class="col-md-2 offset-lg-1">
+                                            <h9 id="itemRealPrice_{$item['id']}" class="mb-0">{$item['price']} руб.</h9>
+                                        </div>
+                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+
+                                        </div>
                                 </div>
                             </div>
                         </div>
                         {/foreach}
                         <h6>Данные получателя:</h6>
-                        <div class = "col-md-6 border-right">
+                        <div class="col-md-6 border-right">
                             <div class="p-2 py-1">
                                 <div class="row mt-3">
                                     <div class="col-md-12">
-<label class="labels">Email:</label><label id="userEmail" class="labels">{$arrUser['email']}</label>
+                                        <label class="labels">Email:</label><label id="userEmail" class="labels">{$arrUser['email']}</label>
                                     </div>
-<div class="col-md-12">
-<label class="labels">Имя:</label><label id="userName" class="labels">{$arrUser['name']}</label>
-</div>
-<div class="col-md-12">
-<label class="labels">Телефон:</label><label id="userPhone" class="labels">{$arrUser['phone']}</label>
-</div>
-<div class="col-md-12">
-<label class="labels">Адес доставки:</label><label id="userAddress" class="labels">{$arrUser['address']}</label>
-</div>
+                                    <div class="col-md-12">
+                                        <label class="labels">Имя:</label><label id="userName" class="labels">{$arrUser['name']}</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels">Телефон:</label><label id="userPhone" class="labels">{$arrUser['phone']}</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label class="labels">Адес доставки:</label><label id="userAddress" class="labels">{$arrUser['address']}</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
